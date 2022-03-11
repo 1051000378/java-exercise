@@ -67,7 +67,7 @@
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
       <version>3.1.0</version>
-      <scope>compile</scope>
+      <scope>provided</scope>
     </dependency>
 
 <!--    jsp依赖-->
@@ -83,7 +83,7 @@
 
 
   <build>
-    <finalName>demo2</finalName> <!--此处若无名称，打war包会带版本号-->
+    <finalName>demo</finalName>  <!--不加该标签打包会显示版本号-->
     <plugins>
       <plugin>
         <groupId>org.mortbay.jetty</groupId>
@@ -96,7 +96,7 @@
               <maxIdleTime>30000</maxIdleTime>
             </connector>
           </connectors>
-          <webAppSourceDirectory>${project.build.directory}/${pom.artifactId}</webAppSourceDirectory>
+          <webAppSourceDirectory>${project.build.directory}/${project.artifactId}-${project.version}</webAppSourceDirectory>
           <contextPath>/</contextPath>
         </configuration>
       </plugin>
