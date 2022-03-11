@@ -12,6 +12,9 @@
         <module>JDBC</module>
         <module>servlet</module>
         <module>httpdemo</module>
+        <module>demo1</module>
+        <module>demo2</module>
+
     </modules>
 
     <properties>

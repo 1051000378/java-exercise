@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiaoqu.mapper.UserMapper">
+
+    <select id="selectAll" resultType="com.xiaoqu.bean.User">
+        select * from user;
+    </select>
+
+    <select id="selectByName" resultType="com.xiaoqu.bean.User">
+        select * from user where username=#{username} and password=#{password};
+    </select>
+
+    <insert id="add">
+        insert into user(username,password) values (#{username},#{password});
+    </insert>
+
+    <update id="update">
+        update user set password=#{password} where username=#{username};
+    </update>
+
+
+
+
+</mapper>
+

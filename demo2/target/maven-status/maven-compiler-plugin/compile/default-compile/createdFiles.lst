@@ -1,0 +1,7 @@
+com\xiaoqu\bean\User.class
+com\xiaoqu\mapper\UserMapper.class
+com\xiaoqu\HelloWorld.class
+com\xiaoqu\LoginServlet.class
+com\xiaoqu\service\UserService.class
+com\xiaoqu\bean\Brand.class
+com\xiaoqu\mapper\BrandMapper.class

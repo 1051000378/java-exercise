@@ -7,9 +7,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="JDBC" />
-        <module name="servlet" />
         <module name="httpdemo" />
+        <module name="servlet" />
+        <module name="demo1" />
+        <module name="demo2" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="demo1" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
