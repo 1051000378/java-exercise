@@ -6,15 +6,32 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="JDBC" />
+        <module name="springdemo" />
         <module name="httpdemo" />
+        <module name="ssm-learn" />
         <module name="servlet" />
+        <module name="JDBC" />
         <module name="demo1" />
+        <module name="ssm-demo" />
         <module name="demo2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="demo" target="1.8" />
       <module name="demo1" target="1.5" />
+      <module name="demo2" target="1.5" />
+      <module name="httpdemo" target="8" />
+      <module name="java-exercise" target="8" />
+      <module name="JDBC" target="8" />
+      <module name="servlet" target="1.7" />
+      <module name="springdemo" target="8" />
+      <module name="ssm-demo" target="8" />
+      <module name="ssm-learn" target="1.7" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="demo" options="-parameters" />
+    </option>
   </component>
 </project>

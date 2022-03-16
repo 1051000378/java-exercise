@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+
+       xsi:schemaLocation=
+               "http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans.xsd
+                http://www.springframework.org/schema/aop
+                http://www.springframework.org/schema/aop/spring-aop.xsd"
+>
+
+<!--    三种实例化方法-->
+<!--    1.无参的构造函数-->
+<!--
+    配置bean的作用：将bean交给spring进行管理
+    基本属性 id:Bean实例在Spring容器中的唯一标识  class:Bean的全限定名称
+            scope:指对象的作用范围 singleton：默认的，单例的  prototype:多例的
+    -->
+    <bean id="userDao" class="com.xiaoqu.dao.impl.UserDaoImpl" scope="singleton"></bean>
+
+<!--    2.工厂的静态方法返回Bean实例-->
+    <bean id="userDao1" class="com.xiaoqu.factory.StaticFactoryBean" factory-method="createUserDao"/>
+<!--    3.工厂的非静态实例化方法-->
+    <bean id="userDao2" class="com.xiaoqu.factory.DynamicFactoryBean"/>
+    <bean id="dynamicFactoryBean" factory-bean="userDao2" factory-method="createUserDao"/>
+
+<!--    配置目标类-->
+    <bean id="target" class="com.xiaoqu.aopdemo.Target"/>
+<!--    配置切面类-->
+    <bean id="myAspect" class="com.xiaoqu.aopdemo.MyAspect"/>
+
+    <aop:config>
+<!--        引入myAspect的Bean为切面对象-->
+        <aop:aspect ref="myAspect">
+<!--            配置target的method方法执行时要进行myAspect的before方法前置增强-->
+            <aop:before method="before" pointcut="execution(public void com.xiaoqu.aopdemo.Target.method())"></aop:before>
+        </aop:aspect>
+
+    </aop:config>
+
+
+
+
+</beans>

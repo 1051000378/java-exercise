@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="servlet:war" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="55d122ce-9332-4a09-8527-c3a599f15432" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/JDBC/src/main/java/com/xiaoqu/Phone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JDBC/src/main/java/com/xiaoqu/mapper/PhoneMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JDBC/src/main/java/com/xiaoqu/mybatisdemo/PhoneDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JDBC/src/main/resources/mapper/PhoneMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springdemo/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springdemo/src/main/java/com/xiaoqu/Hello.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springdemo/src/main/java/com/xiaoqu/aopdemo/MyAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springdemo/src/main/java/com/xiaoqu/aopdemo/Target.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springdemo/src/main/java/com/xiaoqu/aopdemo/TargetInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springdemo/src/main/java/com/xiaoqu/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springdemo/src/main/java/com/xiaoqu/dao/impl/UserDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springdemo/src/main/java/com/xiaoqu/factory/DynamicFactoryBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springdemo/src/main/java/com/xiaoqu/factory/StaticFactoryBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springdemo/src/main/resources/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springdemo/src/test/java/com/xiaoqu/AopTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssm-demo/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssm-demo/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssm-demo/src/webapp/WEB-INF/web.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssm-demo/src/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssm-demo/src/webapp/static/bootstrap-3.4.1-dist/css/bootstrap-theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssm-demo/src/webapp/static/bootstrap-3.4.1-dist/css/bootstrap-theme.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssm-demo/src/webapp/static/bootstrap-3.4.1-dist/css/bootstrap-theme.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssm-demo/src/webapp/static/bootstrap-3.4.1-dist/css/bootstrap-theme.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssm-demo/src/webapp/static/bootstrap-3.4.1-dist/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssm-demo/src/webapp/static/bootstrap-3.4.1-dist/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssm-demo/src/webapp/static/bootstrap-3.4.1-dist/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssm-demo/src/webapp/static/bootstrap-3.4.1-dist/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssm-demo/src/webapp/static/bootstrap-3.4.1-dist/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssm-demo/src/webapp/static/bootstrap-3.4.1-dist/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssm-demo/src/webapp/static/bootstrap-3.4.1-dist/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssm-demo/src/webapp/static/bootstrap-3.4.1-dist/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssm-demo/src/webapp/static/bootstrap-3.4.1-dist/fonts/glyphicons-halflings-regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssm-demo/src/webapp/static/bootstrap-3.4.1-dist/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssm-demo/src/webapp/static/bootstrap-3.4.1-dist/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssm-demo/src/webapp/static/bootstrap-3.4.1-dist/js/npm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssm-demo/src/webapp/static/jquery-3.5.1/jquery-3.5.1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssm-demo/src/webapp/static/jquery-3.5.1/jquery-3.5.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssm-demo/src/webapp/static/jquery-3.5.1/jquery插件库.url" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssm-demo/src/webapp/static/jquery-3.5.1/www.jq22.com.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssm-learn/generatorConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssm-learn/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssm-learn/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssm-learn/src/main/java/com/xiaoqu/Hello.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssm-learn/src/main/java/com/xiaoqu/bean/Department.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssm-learn/src/main/java/com/xiaoqu/bean/DepartmentExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssm-learn/src/main/java/com/xiaoqu/bean/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssm-learn/src/main/java/com/xiaoqu/bean/EmployeeExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssm-learn/src/main/java/com/xiaoqu/dao/DepartmentMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssm-learn/src/main/java/com/xiaoqu/dao/EmployeeMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssm-learn/src/main/resources/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssm-learn/src/main/resources/database.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssm-learn/src/main/resources/mapper/DepartmentMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssm-learn/src/main/resources/mapper/EmployeeMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssm-learn/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssm-learn/src/main/resources/springmvc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssm-learn/src/main/webapp/dispatcherServlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ssm-learn/src/test/java/com/xiaoqu/TestMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/demo1_ear_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/servlet_war.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/servlet_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JDBC/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/JDBC/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JDBC/target/classes/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/JDBC/target/classes/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo1/demo1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-exercise.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Jsp File" />
+        <option value="FxmlFile" />
+        <option value="Interface" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="Mapper" />
+        <option value="Tag Library Descriptor" />
+        <option value="spring-beans.schema" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="265l24KOR92CXjRMKY0loxemhcx" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSP" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ssm-learn" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\workspace\java-exercise\ssm-learn" />
+      <recent name="E:\workspace\java-exercise\ssm-demo\src\webapp\static" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\workspace\java-exercise\JDBC\src\main\resources\mapper" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Hello" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.xiaoqu.Hello" />
+      <module name="ssm-learn" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xiaoqu.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Hello" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="55d122ce-9332-4a09-8527-c3a599f15432" name="Default Changelist" comment="" />
+      <created>1646721121448</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1646721121448</updated>
+      <workItem from="1646721123129" duration="44741000" />
+      <workItem from="1646876826428" duration="290000" />
+      <workItem from="1646877225867" duration="24627000" />
+      <workItem from="1646978308263" duration="1735000" />
+      <workItem from="1646981743773" duration="19082000" />
+      <workItem from="1647230750580" duration="52000" />
+      <workItem from="1647230837183" duration="31196000" />
+      <workItem from="1647393832720" duration="794000" />
+      <workItem from="1647396437546" duration="12983000" />
+      <workItem from="1647417572572" duration="191000" />
+      <workItem from="1647417810183" duration="361000" />
+      <workItem from="1647418247190" duration="107000" />
+      <workItem from="1647418409243" duration="550000" />
+      <workItem from="1647419287600" duration="240000" />
+      <workItem from="1647419583870" duration="10024000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

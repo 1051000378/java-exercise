@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/JDBC/JDBC.iml" filepath="$PROJECT_DIR$/JDBC/JDBC.iml" />
       <module fileurl="file://$PROJECT_DIR$/demo1/demo1.iml" filepath="$PROJECT_DIR$/demo1/demo1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo2/demo2.iml" filepath="$PROJECT_DIR$/demo2/demo2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/httpdemo/httpdemo.iml" filepath="$PROJECT_DIR$/httpdemo/httpdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java-exercise.iml" filepath="$PROJECT_DIR$/java-exercise.iml" />
+      <module fileurl="file://$PROJECT_DIR$/servlet/servlet.iml" filepath="$PROJECT_DIR$/servlet/servlet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springdemo/springdemo.iml" filepath="$PROJECT_DIR$/springdemo/springdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm-demo/ssm-demo.iml" filepath="$PROJECT_DIR$/ssm-demo/ssm-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm-learn/ssm-learn.iml" filepath="$PROJECT_DIR$/ssm-learn/ssm-learn.iml" />
     </modules>
   </component>
 </project>

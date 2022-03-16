@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xiaoqu.mapper.PhoneMapper">
+
+    <select id="selectAll" resultType="com.xiaoqu.Phone">
+        select * from phone;
+    </select>
+
+    <select id="selectByName">
+        select * from phone where name = #{name};
+    </select>
+
+    <insert id="insert">
+        insert into phone(name,price,color) values (#{name},#{price},#{color});
+    </insert>
+
+    <delete id="delete">
+        delete from phone where name = #{name};
+    </delete>
+
+</mapper>

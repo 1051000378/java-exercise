@@ -39,6 +39,7 @@
         <!--加载sql映射文件-->
         <mapper resource="mapper/UserMapper.xml"/>
         <mapper resource="mapper/BrandMapper.xml"/>
+        <mapper resource="mapper/PhoneMapper.xml"/>
     </mappers>
 
 </configuration>
