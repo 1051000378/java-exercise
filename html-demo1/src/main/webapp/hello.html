@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--    页面的字符集-->
+    <meta charset="UTF-8">
+    <title>快速入门</title>
+</head>
+<body>
+<a href="style-demo.html#C4">跳转到第四章</a>
+<!--    标题标签-->
+<!--    h1最大，h6最小-->
+    <h1>我是中国人，我爱中国</h1>
+    <h2>我是中国人，我爱中国</h2>
+    <h3>我是中国人，我爱中国</h3>
+    <h4>我是中国人，我爱中国</h4>
+    <h5>我是中国人，我爱中国</h5>
+    <h6>我是中国人，我爱中国</h6>
+<!--  hr  横线效果-->
+    <hr>
+刚察草原绿草如茵，沙柳河水流淌入湖。藏族牧民索南才让家中，茶几上摆着馓子、麻花和水果，炉子上刚煮开的奶茶香气四溢……<br>  <!--br换行-->
+
+6月8日下午，习近平总书记来到青海省海北藏族自治州刚察县沙柳河镇果洛藏贡麻村，走进牧民索南才让家中，看望慰问藏族群众。
+<!--段落标签p-->
+<p>
+    刚察草原绿草如茵，沙柳河水流淌入湖。藏族牧民索南才让家中，茶几上摆着馓子、麻花和水果，炉子上刚煮开的奶茶香气四溢……
+</p>
+<p>
+    6月8日下午，习近平总书记来到青海省海北藏族自治州刚察县沙柳河镇果洛藏贡麻村，走进牧民索南才让家中，看望慰问藏族群众。
+</p>
+
+<!--b:加粗标签  i:斜体标签   u:下划线标签-->
+<b>沙柳河水流淌</b>
+<i>沙柳河水流淌</i>
+<u>沙柳河水流淌</u>
+
+<!-- - img：定义图片-->
+<!--    - src：规定显示图像的 URL（统一资源定位符）-->
+<!--    - height：定义图像的高度-->
+<!--    - width：定义图像的宽度-->
+<!-- - audio：定义音频。支持的音频格式：MP3、WAV、OGG-->
+<!--    - src：规定音频的 URL-->
+<!--    - controls：显示播放控件-->
+<!-- - video：定义视频。支持的音频格式：MP4, WebM、OGG-->
+<!--    - src：规定视频的 URL-->
+<!--    - controls：显示播放控件-->
+<!--注意：audio和video要用双标签-->
+<img src="cat.jpg" height="300" width="400"/>
+<audio src="13169.wav" controls></audio>
+<video src="fengjing.mp4" controls width="500" height="300"></video>
+
+<!--超链接-->
+<!--`a` 标签属性：-->
+
+<!-- - href：指定访问资源的URL-->
+<!-- - target：指定打开资源的方式-->
+<!-- -      _self：默认值，在当前页面打开-->
+<!-- -      _blank：在空白页面打开-->
+<a href="https://www.baidu.com" target="_self">点我有惊喜</a>
+<!--列表标签-->
+<!--有序标签-->
+<ol type="A">
+    <li>咖啡</li>
+    <li>牛奶</li>
+    <li>茶</li>
+</ol>
+
+<ul type="circle">
+    <li>咖啡</li>
+    <li>咖啡</li>
+    <li>咖啡</li>
+    <li>咖啡</li>
+</ul>
+<!--表格标签-->
+<!-- - table ：定义表格-->
+<!-- -    border：规定表格边框的宽度-->
+<!-- -   width ：规定表格的宽度-->
+<!-- -   cellspacing：规定单元格之间的空白-->
+<!-- - tr ：定义行-->
+<!-- -   align：定义表格行的内容对齐方式-->
+<!-- - td ：定义单元格-->
+<!-- -   rowspan:规定单元格可横跨的行数-->
+<!-- -   colspan:规定单元格可横跨的列数-->
+<!-- - th：定义表头单元格-->
+<table border="1" cellpadding="0" width="500">
+    <tr>
+        <th>序号</th>
+        <th>品牌logo</th>
+        <th>品牌名称</th>
+        <th>企业名称</th>
+    </tr>
+    <tr align="center">
+        <td>010</td>
+        <td><img src="cat.jpg" width="60" height="50"></td>
+        <td>三只松鼠</td>
+        <td>三只松鼠</td>
+    </tr>
+    <tr align="center">
+        <td>009</td>
+        <td><img src="cat.jpg" width="40" height="30"></td>
+        <td>优衣库</td>
+        <td>优衣库</td>
+    </tr>
+    <tr align="center">
+        <td>008</td>
+        <td><img src="cat.jpg" width="40" height="30"></td>
+        <td>小米</td>
+        <td>小米科技有限公司</td>
+    </tr>
+</table>
+
+<!--布局标签-->
+<!--定义HTML文档中的一个区域部分-->
+<!--这两个标签，一般都是和css结合到一块使用来实现页面的布局。-->
+<!--`div`标签 在浏览器上会有换行的效果，而 `span` 标签在浏览器上没有换行效果。-->
+<div>我是div</div>
+<div>我是div</div>
+<span>我是span</span>
+<span>我是span</span>
+
+<!--表单：在网页中主要负责数据采集功能，使用<form>标签定义表单-->
+<!--表单项(元素)：不同类型的 input 元素、下拉列表、文本域等-->
+<form action="#" method="post">
+    <input type="hidden" name="id" value="123">
+    <label for="username">用户名：</label>
+    <input type="text" name="username" id="username">
+
+    <label for="password">密码：</label>
+    <input type="password" name="password" id="password">
+
+    性别：
+    <input type="radio" name="gender" >
+
+
+
+</form>
+
+
+
+
+
+</body>
+</html>

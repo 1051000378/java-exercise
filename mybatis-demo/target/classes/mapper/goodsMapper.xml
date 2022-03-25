@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!--注意：namespace必须要与映射的对象一致-->
+<mapper namespace="com.xiaoqu.dao.GoodsMapper">
+
+<!--    <resultMap id="goodsResultMapper" type="com.xiaoqu.pojo.Goods">-->
+<!--        <result column="goods_id" property="goodsId"/>-->
+<!--        <result column="sub_title" property="subTitle"/>-->
+<!--        <result column="original_cost" property="originalCost"/>-->
+<!--        <result column="current_price" property="currentPrice"/>-->
+<!--        <result column="is_free_delivery" property="isFreeDelivery"/>-->
+<!--        <result column="category_id" property="categoryId"/>-->
+<!--    </resultMap>-->
+
+<!--    查询所有的-->
+    <select id="selectAll" resultType="com.xiaoqu.pojo.Goods">
+        select * from goods;
+    </select>
+
+</mapper>

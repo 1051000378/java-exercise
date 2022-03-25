@@ -17,6 +17,12 @@
         <module>springdemo</module>
         <module>ssm-demo</module>
         <module>ssm-learn</module>
+        <module>mybatis-demo</module>
+        <module>html-demo</module>
+        <module>html-demo</module>
+        <module>html-demo1</module>
+        <module>exercise</module>
+        <module>springmvc-demo</module>
 
     </modules>
 

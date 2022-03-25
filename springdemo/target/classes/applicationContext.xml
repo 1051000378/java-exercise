@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation=
+               "http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans.xsd
+                http://www.springframework.org/schema/aop
+                http://www.springframework.org/schema/aop/spring-aop.xsd
+                http://www.springframework.org/schema/util
+                http://www.springframework.org/schema/util/spring-util.xsd
+                http://www.springframework.org/schema/context
+                http://www.springframework.org/schema/context/spring-context.xsd
+
+">
+<!--  一、  赋值方式一：set bean中不需要带参的构造方式，但需要set方法-->
+    <bean id="book" class="com.xiaoqu.demo1.Book">
+        <property name="bname">
+            <value><![CDATA[<<南京>>]]></value>
+        </property>
+        <property name="author" value="道门老九"/>
+    </bean>
+
+    <bean id="order" class="com.xiaoqu.demo1.Orders">
+        <constructor-arg name="oname" value="小米"/>
+        <constructor-arg name="address" value="背景"/>
+    </bean>
+<!-- 二、   在一个类里面调用另一个类,
+    外部bean-->
+<!--    <bean id="userService" class="com.xiaoqu.demo1.com.xiaoqu.UserService">-->
+<!--        <property name="userDao" ref="userDao"></property>-->
+<!--    </bean>-->
+<!--    <bean id="userDao" class="com.xiaoqu.demo1.com.xiaoqu.UserDao">-->
+
+<!--    </bean>-->
+<!--  三、  一个类对另一个是一对多，而另一个对一个是1对1，1个部门有多个员工，而员工只属于一个部门，那在员工类要定义所属部门,
+    内部bean-->
+<!--    <bean id="emp" class="com.xiaoqu.demo1.Emp">-->
+<!--        <property name="ename" value="小明"></property>-->
+<!--        <property name="gender" value="男"></property>-->
+<!--        <property name="dept">-->
+<!--            <bean id="dept" class="com.xiaoqu.demo1.Dept">-->
+<!--                <property name="dname" value="安保部"></property>-->
+<!--            </bean>-->
+<!--        </property>-->
+<!--    </bean>-->
+<!--  四、   级联赋值-->
+<!--    <bean id="emp" class="com.xiaoqu.demo1.Emp">-->
+<!--        <property name="ename" value="小李"></property>-->
+<!--        <property name="gender" value="男"></property>-->
+<!--        <property name="dept" ref="dept"></property>-->
+<!--    </bean>-->
+<!--    <bean id="dept" class="com.xiaoqu.demo1.Dept">-->
+<!--        <property name="dname" value="财务部"></property>-->
+<!--    </bean>-->
+
+<!--  五、  级联赋值，第二种方法,emp要增加getDept方法-->
+<!--    <bean id="emp" class="com.xiaoqu.demo1.Emp">-->
+<!--        <property name="ename" value="李明"></property>-->
+<!--        <property name="gender" value="男"></property>-->
+<!--        <property name="dept" ref="dept"></property>-->
+<!--        <property name="dept.dname" value="研发部"></property>-->
+<!--    </bean>-->
+<!--    <bean id="dept" class="com.xiaoqu.demo1.Dept">-->
+<!--        <property name="dname" value="财务部"></property>-->
+<!--    </bean>-->
+<!--  六、  集合类型的属性-->
+    <bean id="stu" class="com.xiaoqu.demo1.Stu">
+        <property name="courses">
+            <array>
+                <value>数学</value>
+                <value>语文</value>
+            </array>
+        </property>
+        <property name="list">
+            <list>
+                <ref bean="course1"/>
+                <ref bean="course2"/>
+            </list>
+        </property>
+        <property name="sets">
+            <set>
+                <value>小王</value>
+                <value>小红</value>
+            </set>
+        </property>
+        <property name="maps">
+            <map>
+                <entry key="PHP" value="php"></entry>
+                <entry key="JAVA" value="java"></entry>
+            </map>
+        </property>
+    </bean>
+<!--    七、在集合里面设置对象类型-->
+<!--    创建多个对象-->
+<!--    将stu类中string改为course类型-->
+    <bean id="course1" class="com.xiaoqu.demo1.Course">
+        <property name="cname" value="数学"></property>
+    </bean>
+    <bean id="course2" class="com.xiaoqu.demo1.Course">
+        <property name="cname" value="语文"></property>
+    </bean>
+<!--    8、使用util模板将List类型属性从对象中提取出来-->
+    <util:list id="bookList">
+        <value>数学</value>
+        <value>英语</value>
+    </util:list>
+    <bean id="books" class="com.xiaoqu.demo1.Books">
+        <property name="bname" ref="bookList"/>
+    </bean>
+
+<!--    9、FactoryBean -->
+    <bean id="myBean" class="com.xiaoqu.demo1.MyBean">
+    </bean>
+
+<!--    10、生命周期-->
+    <bean id="lifeCycle" class="com.xiaoqu.demo1.LifeCycle" init-method="initMethod" destroy-method="destroyMethod">
+        <property name="name" value="丽丽"/>
+    </bean>
+    <bean id="myBeanPost" class="com.xiaoqu.demo1.MyBeanPost"></bean>
+
+<!--    11.自动装配-->
+    <bean id="autoWire" class="com.xiaoqu.demo1.AutoWire" autowire="byName"></bean>
+
+<!--    引入外部属性文件-->
+    <context:property-placeholder location="classpath:jdbc.properties"/>
+<!--    12.外部属性文件 druid 引入外部properties-->
+    <bean id="druid" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="url" value="${jdbc.url}"/>
+        <property name="driver" value="${jdbc.driver}"/>
+        <property name="username" value="${jdbc.user}"/>
+        <property name="password" value="${jdbc.password}"/>
+    </bean>
+
+<!--    13.注解方式实现对象创建-->
+    <context:component-scan base-package="com.xiaoqu.annotation"></context:component-scan>
+
+
+
+
+<!--    三种实例化方法-->
+<!--    1.无参的构造函数-->
+<!--
+    配置bean的作用：将bean交给spring进行管理
+    基本属性 id:Bean实例在Spring容器中的唯一标识  class:Bean的全限定名称
+            scope:指对象的作用范围 singleton：默认的，单例的  prototype:多例的
+    -->
+    <bean id="userDao" class="com.xiaoqu.dao.impl.UserDaoImpl" scope="singleton"></bean>
+
+<!--    2.工厂的静态方法返回Bean实例-->
+    <bean id="userDao1" class="com.xiaoqu.factory.StaticFactoryBean" factory-method="createUserDao"/>
+<!--    3.工厂的非静态实例化方法-->
+    <bean id="userDao2" class="com.xiaoqu.factory.DynamicFactoryBean"/>
+    <bean id="dynamicFactoryBean" factory-bean="userDao2" factory-method="createUserDao"/>
+
+<!--    配置目标类-->
+    <bean id="target" class="com.xiaoqu.aopdemo.Target"/>
+<!--    配置切面类-->
+    <bean id="myAspect" class="com.xiaoqu.aopdemo.MyAspect"/>
+
+    <aop:config>
+<!--        引入myAspect的Bean为切面对象-->
+        <aop:aspect ref="myAspect">
+<!--            配置target的method方法执行时要进行myAspect的before方法前置增强-->
+            <aop:before method="before" pointcut="execution(public void com.xiaoqu.aopdemo.Target.method())"></aop:before>
+        </aop:aspect>
+
+    </aop:config>
+
+
+
+
+</beans>

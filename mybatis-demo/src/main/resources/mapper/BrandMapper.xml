@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiaoqu.dao.BrandMapper">
+
+    <resultMap id="brandResultMap" type="com.xiaoqu.Brand">
+<!--        id:完成主键字段的映射-->
+<!--            column:表的列名-->
+<!--            property:实体类的属性名-->
+<!--        result:完成一般字段的映射-->
+<!--            column:表的列名-->
+<!--            property:实体类的属性名-->
+        <result column="brand_name" property="brandName"/>
+        <result column="company_name" property="companyName"/>
+    </resultMap>
+
+    <select id="selectAll" resultMap="brandResultMap">
+        select * from tb_brand;
+    </select>
+
+    <select id="selectById" resultMap="brandResultMap">
+        select * from tb_brand where id=#{id};
+    </select>
+
+<!--    多条件查询-->
+    <select id="selectByCondition1" resultMap="brandResultMap">
+        select * from tb_brand where status=#{status} and company_name like #{companyName} and brand_name like #{brandName}
+    </select>
+    <select id="selectByCondition2" resultMap="brandResultMap">
+        select * from tb_brand where status=#{status} and company_name like #{companyName} and brand_name like #{brandName}
+    </select>
+    <select id="selectByCondition3" resultMap="brandResultMap">
+        select * from tb_brand where status=#{status} and company_name like #{companyName} and brand_name like #{brandName}
+    </select>
+
+<!--    搜索框下拉选择条件-->
+    <select id="selectByConditionSingle" resultMap="brandResultMap">
+        select * from tb_brand
+        <where>
+            <choose>
+                <when test="status != null">
+                    status = #{status}
+                </when>
+                <when test="companyName!=null and companyName!=''">
+                    company_name like #{companyName}
+                </when>
+                <when test="brandName!=null and companyName!=''">
+                    brand_name like #{brandName}
+                </when>
+            </choose>
+            <if test="companyName!=null and companyName!=''">
+                and company_name like #{companyName}
+            </if>
+        </where>
+    </select>
+
+    <insert id="add">
+        insert into tb_brand(brand_name,company_name,ordered,description,status) values (#{brandName},#{companyName},#{ordered},#{description},#{status})
+    </insert>
+    <insert id="addKey" parameterType="com.xiaoqu.Brand" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+        insert into tb_brand(brand_name,company_name,ordered,description,status) values(#{brandName},#{companyName},#{ordered},#{description},#{status})
+    </insert>
+
+
+    <update id="update">
+        update tb_brand set description = #{description} where brand_name = #{brandName}
+    </update>
+
+    <update id="update1">
+        update tb_brand
+        <set>
+            <if test="brandName!=null and brandName !=''">
+                brand_name = #{brandName},
+            </if>
+            <if test="companyName!=null and brandName !=''">
+                company_name = #{companyName},
+            </if>
+            <if test="ordered!=null and ordered !=''">
+                ordered = #{ordered},
+            </if>
+            <if test="description!=null and description !=''">
+                description = #{description},
+            </if>
+            <if test="status!=null and status !=''">
+                status = #{status}
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <delete id="delete">
+        delete from tb_brand where id = #{id};
+    </delete>
+    <delete id="deleteById">
+        delete from tb_brand where id=#{id};
+    </delete>
+    <delete id="deleteByIds">
+        delete from tb_brand where id in
+        <foreach collection="array" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+        ;
+    </delete>
+
+
+
+</mapper>

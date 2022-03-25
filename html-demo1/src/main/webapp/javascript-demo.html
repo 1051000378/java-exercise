@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function func1() {
+            document.getElementById('demo1').innerHTML="this script is in head";
+        }
+    </script>
+</head>
+<body>
+
+<button type="button" onclick="document.getElementById('demo').innerHTML=Date()">点击显示时间</button>
+<p id="demo"></p>
+
+<button type="button" onclick="document.getElementById('myImage').src='eg_bulbon.gif'">开灯</button>
+<img id="myImage" border="0" src="eg_bulboff.gif" style="text-align: center">
+<button type="button" onclick="document.getElementById('myImage').src='eg_bulboff.gif'">关灯</button>
+
+<button type="button" onclick="func1()">引用head</button>
+<p id="demo1"></p>
+
+<script src="script/myScript.js">
+
+</script>
+<h1>我的第一张网页</h1>
+<p>我的第一个段落</p>
+<button type="button" onclick="document.write(5+6)">试一试</button>
+<button type="button" onclick="window.alert(5+6)">弹窗</button>
+<script>
+    console.log(5+6)
+</script>
+
+<!--排序-->
+<p id="demo3"></p>
+<button type="button" onclick="mySort()">排序</button>
+
+<script>
+    var nums = [34,45,23,100,99,34,67];
+    document.getElementById("demo3").innerHTML=nums;
+
+    function mySort() {
+        nums.sort(function(a,b){return a-b});
+        document.getElementById("demo3").innerHTML=nums;
+    }
+</script>
+
+<!--查出最大值-->
+<p id="max1"></p>
+<button type="button" onclick="max1()">找出最大值</button>
+<script>
+    var nums = [5,3,4,2,4,3]
+    document.getElementById("max1").innerHTML=nums
+    function min1(){
+        return Math.max.apply(null,nums);
+
+    }
+
+</script>
+
+<!--最小值-->
+<p id="min1"></p>
+<button type="button" onclick="min1()">找出最小值</button>
+<script>
+    var nums = [43,33,23,22,88];
+    document.getElementById("min1").innerHTML=nums;
+
+    function min1() {
+        document.getElementById("min1").innerHTML=Math.min.apply(null,nums);
+    }
+
+</script>
+
+<p id="lili"></p>
+
+<script>
+    arr = [3,2,55,33,22,99];
+    document.getElementById("lili").innerHTML=myArrayMax(arr);
+    function myArrayMax(arr) {
+        var len = arr.length
+        var max = -Infinity;
+        while (len--){
+            if (max<arr[len]){
+                max = arr[len];
+            }
+        }
+        return max;
+    }
+</script>
+
+最小值：<p id="ll"></p>
+<script>
+    arr=[3,4,2,99,33]
+    document.getElementById("ll").innerHTML=myArrayMin(arr);
+    function myArrayMin(arr) {
+        var len = arr.length;
+        var min = Infinity;
+        while (len--){
+            if (min>arr[len]){
+                min = arr[len]
+            }
+        }
+        return min;
+    }
+
+</script>
+
+<script>
+    function myDisplayer(some) {
+        document.getElementById("demo").innerHTML=some;
+    }
+
+    function myCalculator(num1,num2,myCallback) {
+        let sum = num1+num2;
+        myCallback(sum)
+    }
+    myCalculator(5,5,myDisplayer)
+
+
+</script>
+
+<form name="myForm" action="hello.html" onsubmit="return validateForm()" method="post">
+    Name:<input type="text" name="fname">
+    <input type="submit" value="Submit">
+</form>
+
+<script>
+    function validateForm() {
+        let x = document.forms["myForm"]["fname"].value;
+        if (x==""){
+            alert("Name must be filled out");
+            return false;
+        }
+    }
+</script>
+
+<div id="aj">
+    <h2>让Ajax更改这段文本</h2>
+    <button type="button" onclick="loadDoc()">更改文本</button>
+</div>
+<script>
+    function loadDoc() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+            if (this.readyState==4 && this.status==200){
+                document.getElementById("aj").innerHTML = this.responseText;
+            }
+
+        };
+        xhttp.open("GET","ajax_info.txt",true);
+        xhttp.send();
+    }
+</script>
+
+</body>
+</html>

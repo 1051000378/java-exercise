@@ -18,7 +18,7 @@
 <!--   1. 配置数据源-->
     <context:property-placeholder location="classpath:database.properties"/>
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
-        <property name="driverClass" value="${driver}"/>
+        <property name="driverClass" value="${driverName}"/>
         <property name="jdbcUrl" value="${url}"/>
         <property name="user" value="${user}"/>
         <property name="password" value="${password}"/>
@@ -55,7 +55,7 @@
 
     <!--   2. 配置和mybatis的整合-->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="dataSource" value="dataSource"/>
+        <property name="dataSource" ref="dataSource"/>
         <property name="mapperLocations">
             <list>
                 <value>classpath:mapper/*.xml</value>
@@ -75,6 +75,7 @@
 <!--        控制住数据源-->
         <property name="dataSource" ref="dataSource"/>
     </bean>
+
 <!--    开启基于注解的事务，使用xml配置形式的事务（必要主要的都是使用配置）-->
     <aop:config>
 <!--        切入点表达式-->
