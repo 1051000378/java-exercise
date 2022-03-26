@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="JDBC" />
         <module name="httpdemo" />
+        <module name="html-test" />
         <module name="servlet" />
         <module name="demo1" />
         <module name="demo2" />
