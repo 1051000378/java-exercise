@@ -6,16 +6,36 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="JDBC" />
-        <module name="httpdemo" />
-        <module name="html-test" />
+        <module name="springdemo" />
         <module name="servlet" />
+        <module name="exercise" />
+        <module name="html-test" />
+        <module name="springmvc-demo" />
+        <module name="ssm-learn" />
+        <module name="httpdemo" />
+        <module name="html-demo1" />
+        <module name="mybatis-demo" />
+        <module name="JDBC" />
         <module name="demo1" />
+        <module name="ssm-demo" />
         <module name="demo2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="demo1" target="1.5" />
+      <module name="demo2" target="1.5" />
+      <module name="exercise" target="8" />
+      <module name="html-demo1" target="1.7" />
+      <module name="html-test" target="1.7" />
+      <module name="httpdemo" target="8" />
+      <module name="java-exercise" target="8" />
+      <module name="JDBC" target="8" />
+      <module name="mybatis-demo" target="8" />
+      <module name="servlet" target="1.7" />
+      <module name="springdemo" target="8" />
+      <module name="springmvc-demo" target="8" />
+      <module name="ssm-demo" target="8" />
+      <module name="ssm-learn" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,0 +1,63 @@
+/*id选择器*/
+#myid {
+    background-color: aqua;
+    color: blueviolet;
+    font-size: medium;
+}
+
+/*类选择器*/
+.myClass {
+    background-color: antiquewhite;
+    color: #eeeeee;
+}
+
+/*特定选择器*/
+p.center {
+    background-color: blue;
+    color: aqua;
+}
+
+/*分组选择器*/
+/*h1,p,h2 {*/
+/*    background-color: cadetblue;*/
+/*    color: chartreuse;*/
+/*}*/
+/*背景图像*/
+body {
+    background-image: url("../cat.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+}
+p.dotted {
+    border-style: dotted;
+}
+p.one {
+    border-style: double;
+    border-width: 5px;
+    border-color: chartreuse;
+}
+/*p {*/
+/*    margin-top: 100px;*/
+/*    margin-bottom: 100px;*/
+/*    margin-right: 150px;*/
+/*    margin-left: 80px;*/
+/*}*/
+p {
+    margin: 20px 40px 20px 40px;
+}
+
+div {
+    width: 300px;
+    margin: auto;
+    border: 1px solid red;
+}
+div {
+    padding: 100px 200px 100px 200px;
+    outline: cadetblue;
+    outline-style: dot-dash;
+    outline-width: 3px;
+}
+a {
+    text-decoration: none;
+}

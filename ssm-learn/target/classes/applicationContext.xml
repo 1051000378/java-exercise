@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsdhttp://www.springframework.org/schema/tx
+       http://www.springframework.org/schema/tx/spring-tx.xsd">
+<!--    开启注解扫描，要扫描的是service和dao层的注解，要忽略web层注解，因为web层让SpringMVC框架去管理-->
+    <context:component-scan base-package="com.xiaoqu.service"/>
+    <context:component-scan base-package="com.xiaoqu.dao"/>
+
+<!--   1. 配置数据源-->
+    <context:property-placeholder location="classpath:database.properties"/>
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="driverClass" value="${driver}"/>
+        <property name="jdbcUrl" value="${url}"/>
+        <property name="user" value="${user}"/>
+        <property name="password" value="${password}"/>
+<!--        连接池中保留的最小连接数-->
+        <property name="minPoolSize" value="${minPoolSize}"/>
+<!--        连接池中保留的最大连接数 Default:15-->
+        <property name="maxPoolSize" value="${maxPoolSize}"/>
+<!--        初始化时获取的连接数，取值应在minPoolSize和maxPoolSize之间，Default:3-->
+        <property name="initialPoolSize" value="${initialPoolSize}"/>
+<!--        最大空闲时间，60秒内未使用则连接被丢弃。若为0则永不丢弃。Default:0-->
+        <property name="maxIdleTime" value="${maxIdleTime}"/>
+<!--        当连接池中的连接耗尽的时候c3po自动增量。Default:3-->
+        <property name="acquireIncrement" value="${acquireIncrement}"/>
+        <!-- JDBC的标准参数，用以控制数据源内加载的PreparedStatements数量。但由于预缓存的statements
+            属于单个connection而不是整个连接池。所以设置这个参数需要考虑到多方面的因素。
+            如果maxStatements与maxStatementsPerConnection均为0，则缓存被关闭。Default: 0 -->
+        <property name="maxStatements" value="${maxStatements}"/>
+        <!--maxStatementsPerConnection：定义了连接池内单个连接所拥有的最大缓存statements数。Default: 0  -->
+        <property name="maxStatementsPerConnection" value="${maxStatementsPerConnection}"/>
+        <!-- 每60秒检查所有连接池中的空闲连接。Default: 0  -->
+        <property name="idleConnectionTestPeriod" value="${idleConnectionTestPeriod}"/>
+        <!-- 定义在从数据库获取新连接失败后重复尝试的次数。Default: 30  -->
+        <property name="acquireRetryAttempts" value="${acquireRetryAttempts}"/>
+        <!-- 获取连接失败将会引起所有等待连接池来获取连接的线程抛出异常。但是数据源仍有效
+            保留，并在下次调用getConnection()的时候继续尝试获取连接。如果设为true，那么在尝试
+            获取连接失败后该数据源将申明已断开并永久关闭。Default: false -->
+        <property name="breakAfterAcquireFailure" value="${breakAfterAcquireFailure}"/>
+        <!-- 因性能消耗大请只在需要的时候使用它。如果设为true那么在每个connection提交的
+             时候都将校验其有效性。建议使用idleConnectionTestPeriod或automaticTestTable
+             等方法来提升连接测试的性能。Default: false  -->
+        <property name="testConnectionOnCheckout" value="${testConnectionOnCheckout}"/>
+
+    </bean>
+
+    <!--   2. 配置和mybatis的整合-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="mapperLocations">
+            <list>
+                <value>classpath:mapper/*.xml</value>
+            </list>
+        </property>
+    </bean>
+
+<!--    开启dao和mapper的映射-->
+<!--  3.  配置扫描器，将mybatis接口的实现加入到ioc容器中-->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+<!--        扫描所有dao接口的实现，加入到ioc容器中-->
+        <property name="basePackage" value="com.xiaoqu.dao"/>
+    </bean>
+
+<!--   4. 数据库事务控制的配置-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+<!--        控制住数据源-->
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+<!--    开启基于注解的事务，使用xml配置形式的事务（必要主要的都是使用配置）-->
+    <aop:config>
+<!--        切入点表达式-->
+        <aop:pointcut id="txPoint" expression="execution(* com.xiaoqu.service..*(..))"/>
+<!--        配置事务增强-->
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="txPoint"/>
+    </aop:config>
+<!--    配置事务增强，事务如何切入-->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+<!--            所有方法都是事务方法-->
+            <tx:method name="*"/>
+<!--            以get开始的所有方法-->
+            <tx:method name="get*" read-only="true"/>
+        </tx:attributes>
+    </tx:advice>
+
+<!--    spring配置文件的核心点：1.数据源  2.与mybatis的整合 3.事务控制-->
+
+</beans>

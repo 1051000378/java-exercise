@@ -14,7 +14,19 @@
         <module>httpdemo</module>
         <module>demo1</module>
         <module>demo2</module>
+<<<<<<< HEAD
         <module>html-test</module>
+=======
+        <module>springdemo</module>
+        <module>ssm-demo</module>
+        <module>ssm-learn</module>
+        <module>mybatis-demo</module>
+        <module>html-demo</module>
+        <module>html-demo</module>
+        <module>html-demo1</module>
+        <module>exercise</module>
+        <module>springmvc-demo</module>
+>>>>>>> 61a2fe62fc8e97866cdb79d75ec91ae6daa5b2a9
 
     </modules>
 
