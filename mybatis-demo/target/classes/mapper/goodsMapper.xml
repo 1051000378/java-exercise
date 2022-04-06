@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <!--注意：namespace必须要与映射的对象一致-->
 <mapper namespace="com.xiaoqu.dao.GoodsMapper">
-
+<!--在mybatis-config开启驼峰命名和表字段名的转换，就不需要手动将实体类和表字段名一一配置了-->
 <!--    <resultMap id="goodsResultMapper" type="com.xiaoqu.pojo.Goods">-->
 <!--        <result column="goods_id" property="goodsId"/>-->
 <!--        <result column="sub_title" property="subTitle"/>-->
@@ -16,5 +16,8 @@
     <select id="selectAll" resultType="com.xiaoqu.pojo.Goods">
         select * from goods;
     </select>
+
+    <
+
 
 </mapper>

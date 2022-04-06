@@ -5,6 +5,7 @@
     <file type="web" url="file://$PROJECT_DIR$/demo2" />
     <file type="web" url="file://$PROJECT_DIR$/html-demo" />
     <file type="web" url="file://$PROJECT_DIR$/html-demo1" />
+    <file type="web" url="file://$PROJECT_DIR$/html-test" />
     <file type="web" url="file://$PROJECT_DIR$/servlet" />
     <file type="web" url="file://$PROJECT_DIR$/springmvc-demo" />
     <file type="web" url="file://$PROJECT_DIR$/ssm-learn" />
@@ -18,7 +19,12 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/exercise/pom.xml" />
         <option value="$PROJECT_DIR$/html-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/springdemo/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/ssm-demo/pom.xml" />
       </set>
     </option>
   </component>

@@ -18,7 +18,7 @@
 <!--   1. 配置数据源-->
     <context:property-placeholder location="classpath:database.properties"/>
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
-        <property name="driverClass" value="${driver}"/>
+        <property name="driverClass" value="${driverName}"/>
         <property name="jdbcUrl" value="${url}"/>
         <property name="user" value="${user}"/>
         <property name="password" value="${password}"/>

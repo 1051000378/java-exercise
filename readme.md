@@ -30,6 +30,11 @@ demo1
 
     实战练手项目
 
+<<<<<<< HEAD
+demo2
+    
+    实战练手项目
+=======
 
 springdemo
     
@@ -40,3 +45,4 @@ springdemo
     4.在Spring配置文件中配置UserDaoImpl
     5.使用Spring的API获得Bean实例
 
+>>>>>>> 61a2fe62fc8e97866cdb79d75ec91ae6daa5b2a9

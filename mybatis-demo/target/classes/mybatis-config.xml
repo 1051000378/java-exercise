@@ -48,6 +48,7 @@
 <!--        加载sql映射文件-->
 <!--        注意这里的格式-->
         <mapper resource="mapper/goodsMapper.xml"/>
+        <mapper resource="mapper/BrandMapper.xml"/>
     </mappers>
 
 </configuration>
