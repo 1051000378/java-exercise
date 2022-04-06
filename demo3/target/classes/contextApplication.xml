@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/util 
+       http://www.springframework.org/schema/util/spring-util.xsd 
+       http://www.springframework.org/schema/tx
+       http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <context:component-scan base-package="com.xiaoqu"/>
+
+    <bean id="student" class="com.xiaoqu.Student">
+        <property name="name" value="xiaoli"/>
+        <property name="age" value="18"/>
+        <property name="gender" value="male"/>
+    </bean>
+
+<!--    <bean id="user" class="com.xiaoqu.User">-->
+<!--    </bean>-->
+
+    <bean id="course" class="com.xiaoqu.Course">
+        <constructor-arg name="math" value="shuxue"/>
+        <constructor-arg name="english" value="yingyu"/>
+        <constructor-arg name="word" value="yuwen"/>
+    </bean>
+
+    <util:list id="list1">
+        <value>h1</value>
+        <value>h2</value>
+    </util:list>
+
+
+    <bean id="book" class="com.xiaoqu.Book" p:name="yingyu" p:author="xiaoli" autowire="byName">
+<!--        <property name="student" ref="stu"/>-->
+        <property name="courses">
+            <array>
+                <value>yingyu</value>
+                <value>yuwen</value>
+                <value>huaxue</value>
+            </array>
+
+        </property>
+        
+
+        <property name="list" ref="list1"/>
+
+        <property name="sets">
+            <set>
+                <value>set1</value>
+                <value>set2</value>
+            </set>
+        </property>
+
+        <property name="maps">
+            <map>
+                <entry key="key1" value="value1"/>
+                <entry key="key2" value="value2"/>
+            </map>
+        </property>
+
+        <property name="students">
+            <list>
+                <ref bean="student"/>
+            </list>
+        </property>
+        
+        
+
+<!--        <property name="student">-->
+<!--            <bean id="stu" class="com.xiaoqu.Student">-->
+<!--                <property name="name" value="xiaoming"/>-->
+<!--                <property name="age" value="18"/>-->
+<!--                <property name="gender" value="nan"/>-->
+<!--            </bean>-->
+<!--        </property>-->
+    </bean>
+
+    <context:property-placeholder location="classpath:dataSource.properties"/>
+
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="driverClassName" value="${jdbc.driver}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+    </bean>
+
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+<!--&lt;!&ndash;    配置事务管理器，以JDBC为例&ndash;&gt;-->
+<!--    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">-->
+<!--        <property name="dataSource" ref="dataSource"/>-->
+<!--    </bean>-->
+<!--&lt;!&ndash;    配置通知&ndash;&gt;-->
+<!--    <tx:advice id="tx-advice" transaction-manager="transactionManager">-->
+<!--&lt;!&ndash;        配置事务的属性&ndash;&gt;-->
+<!--        <tx:attributes>-->
+<!--            <tx:method name="create*" propagation="REQUIRED" isolation="DEFAULT" read-only="false" timeout="10"/>-->
+<!--        </tx:attributes>-->
+<!--    </tx:advice>-->
+
+<!--&lt;!&ndash;    配置切点和切面&ndash;&gt;-->
+<!--    <aop:config>-->
+<!--&lt;!&ndash;        配置切点&ndash;&gt;-->
+<!--        <aop:pointcut id="tx-pt" expression="execution(* com.xiaoqu.dao.impl.OrderDaoImpl.*(..))"/>-->
+<!--&lt;!&ndash;        配置切面&ndash;&gt;-->
+<!--        <aop:advisor advice-ref="tx-advice" pointcut-ref="tx-pt"></aop:advisor>-->
+<!--    </aop:config>-->
+
+
+
+
+
+</beans>
